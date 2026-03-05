@@ -114,9 +114,15 @@ function ServicesPage() {
       const navbarHeight = 80 // Approximate navbar height
       const offset = el.offsetTop - navbarHeight - 20 // 20px extra spacing
       window.scrollTo({ behavior: 'smooth', top: offset })
-      setActive(requested)
-      const t = setTimeout(() => setActive(null), 2500)
-      return () => clearTimeout(t)
+      
+      // Use setTimeout to avoid synchronous setState in effect
+      const setActiveTimeout = setTimeout(() => setActive(requested), 0)
+      const clearActiveTimeout = setTimeout(() => setActive(null), 2500)
+      
+      return () => {
+        clearTimeout(setActiveTimeout)
+        clearTimeout(clearActiveTimeout)
+      }
     }
   }, [requested])
 
