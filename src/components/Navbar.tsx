@@ -84,9 +84,9 @@ function Navbar() {
               <Link to="/services" className="dropdown-item muted" onClick={handleLinkClick}>All Services</Link>
             </div>
           </div>
-          <button className="nav-link" onClick={() => handleScrollToSection('pharma-growth-ecosystem')}>
+          <NavLink to="/ecosystem" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={handleLinkClick}>
             Ecosystem
-          </button>
+          </NavLink>
           <button className="nav-link" onClick={() => handleScrollToSection('our-strategic-approach')}>
             Approach
           </button>
@@ -125,9 +125,9 @@ function Navbar() {
               </Link>
             ))}
           </div>
-          <button onClick={() => handleScrollToSection('pharma-growth-ecosystem')} className="mobile-link">
+          <NavLink to="/ecosystem" onClick={handleLinkClick} className="mobile-link">
             Ecosystem
-          </button>
+          </NavLink>
           <button onClick={() => handleScrollToSection('our-strategic-approach')} className="mobile-link">
             Approach
           </button>

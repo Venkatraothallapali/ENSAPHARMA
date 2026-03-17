@@ -1,0 +1,367 @@
+/* About Page Styles - Using Project Design System */
+
+/* Base Styles */
+.about-page {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  background: var(--color-bg);
+}
+
+/* Hero Section - Matching Home Page Hero Styles */
+.about-hero-section {
+  position: relative;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/about_ENSA.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  transform: scale(1.1);
+  will-change: transform;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Value Proposition Marquee - Optimized Smooth Animation */
+.value-proposition-marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 24px 0;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000px;
+}
+
+.marquee-text {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  padding: 0 50px;
+  white-space: nowrap;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-33.33%) translateZ(0);
+  }
+}
+
+/* Pause on hover for better user experience */
+.value-proposition-marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation: none;
+  }
+  
+  .marquee-content {
+    transform: translateX(0);
+  }
+}
+
+.about-hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.about-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+}
+
+.about-hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.about-hero-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fffffff2;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Content Sections - Using Project Spacing */
+.about-content-wrapper {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--spacing-section) 0;
+}
+
+/* Section Headers - Project Style */
+.about-section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-section);
+}
+
+.about-section-title {
+  font-size: var(--heading-section);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-section-subtitle {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-dim);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography - Project Variables */
+.about-paragraph {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards - Project Design System */
+.about-card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: all var(--transition-base);
+}
+
+.about-card:hover {
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transform: translateY(-2px);
+}
+
+/* Panels - Project Style */
+.about-panel {
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: all var(--transition-base);
+}
+
+.about-panel:hover {
+  box-shadow: 0 4px 16px var(--color-shadow);
+  transform: translateY(-1px);
+}
+
+/* Grid System - Project Spacing */
+.about-grid {
+  display: grid;
+  gap: var(--spacing-section);
+}
+
+.about-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-grid-asymmetric {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+/* Section Backgrounds - Project Colors */
+.about-section-white {
+  background: var(--color-bg);
+}
+
+.about-section-alt {
+  background: var(--color-bg-alt);
+}
+
+/* Mission/Vision Special Layout */
+.about-mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-section);
+  align-items: stretch;
+}
+
+.about-mission-vision .about-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Metrics Section - Project Style */
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin: var(--spacing-section) 0;
+}
+
+.about-metric {
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.about-metric-number {
+  font-size: var(--heading-main);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-heading);
+}
+
+.about-metric-label {
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Visual Divider - Project Style */
+.about-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  margin: var(--spacing-section) 0;
+  opacity: 0.6;
+}
+
+/* Responsive Design - Project Breakpoints */
+@media (max-width: 1024px) {
+  .about-content-wrapper {
+    padding: var(--space-12) var(--container-pad);
+  }
+  
+  .about-grid-2,
+  .about-grid-asymmetric {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-mission-vision {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .about-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    min-height: 50vh;
+    background-attachment: scroll;
+  }
+  
+  .about-hero-title {
+    font-size: var(--heading-section);
+  }
+  
+  .about-content-wrapper {
+    padding: var(--space-8) var(--container-pad);
+  }
+  
+  .about-section-title {
+    font-size: var(--heading-subsection);
+  }
+  
+  .about-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-metrics {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content-wrapper {
+    padding: var(--space-6) var(--container-pad);
+  }
+  
+  .about-card {
+    padding: var(--space-6);
+  }
+  
+  .about-panel {
+    padding: var(--space-4);
+  }
+  
+  .about-metric {
+    padding: var(--space-4);
+  }
+}

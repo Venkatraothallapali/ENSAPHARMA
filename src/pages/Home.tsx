@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
+import './Home.css'
+import EcosystemDiagram from '../components/EcosystemDiagram'
 import ServiceCard from '../components/ServiceCard'
 
 const strategicCards = [
@@ -16,13 +18,19 @@ function Home() {
   return (
     <>
       <Hero
-        title="ENSA Pharma LLP"
-        subtitle="Global Partnerships <br />& Strategic Growth for the Pharmaceutical Industry"
-        tagline="Where Pharmaceutical Deals Take Shape"
-        paragraph="ENSA Pharma LLP, headquartered in Hyderabad, India, is a specialized pharmaceutical marketing and transaction advisory platform bridging global opportunities with credible execution partners across the pharma value chain. Backed by the strategic ecosystem and international regulatory exposure of Masuu Global Solutions, ENSA enables commercial expansion, structured transactions, asset monetization, and cross-border collaborations — connecting APIs, formulations, laboratories, investors, licensors, and acquirers through disciplined and confidential mandates."
+        title=""
+        subtitle="Global Partnerships & Strategic Growth for the Pharmaceutical Industry"
+        description="ENSA Pharma supports pharmaceutical companies in expanding internationally, commercializing high-value assets, and building strategic partnerships across regulated and emerging markets."
+        supportingStatement="From API commercialization and product licensing to M&A advisory and capital facilitation, ENSA Pharma connects pharmaceutical companies and investors to unlock global growth opportunities."
         primaryCta={<Link to="/services" className="btn btn-primary">Explore Services</Link>}
-        secondaryCta={<Link to="/contact" className="btn btn-secondary">Contact Us</Link>}
+        secondaryCta={<Link to="/contact" className="btn btn-secondary">Partner With Us</Link>}
       />
+
+      <div className="ecosystem-section">
+        <h2 className="ecosystem-title">ENSA Pharma Ecosystem</h2>
+        <p className="ecosystem-subtitle">The Strategic Connector in Pharmaceutical Value Chain</p>
+        <EcosystemDiagram />
+      </div>
 
       <Section id="our-strategic-approach" title="Our Strategic Approach" subtitle="API Commercialization | Global Licensing | Pharma M&A | Laboratory Representation | BA/BE Partnerships | Capital Advisory" className="reduced-padding">
         <div className="card-grid">
@@ -65,106 +73,127 @@ function Home() {
         </div>
       </Section>
 
-      <Section id="how-ensa-works" title="HOW ENSA WORKS" subtitle="Identify. Structure. Execute." className="story-section reduced-padding">
-        <div className="grid grid-3">
-          <div className="card" style={{ padding: 18 }}>
-            <div className="badge" style={{ marginBottom: 10 }}>Identify</div>
-            <div className="muted">Opportunity origination through portfolio fit, regulatory readiness and commercial feasibility.</div>
-          </div>
-          <div className="card" style={{ padding: 18 }}>
-            <div className="badge" style={{ marginBottom: 10 }}>Structure</div>
-            <div className="muted">Mandate frameworks, documentation alignment and territory-focused negotiation pathways.</div>
-          </div>
-          <div className="card" style={{ padding: 18 }}>
-            <div className="badge" style={{ marginBottom: 10 }}>Execute</div>
-            <div className="muted">Confidential outreach, due diligence coordination and long-term continuity planning.</div>
-          </div>
-        </div>
-      </Section>
-
-      <Section id="industry-sectors-we-serve" title="Industry sectors we serve " subtitle="API Manufacturers | Formulation Companies | CROs | Laboratories | BA/BE Centers | Promoters | Investors" className="reduced-padding">
-        <div className="card-grid">
-          {['API Manufacturers','Formulation Companies','CROs','Laboratories','BA/BE Centers','Promoters','Investors'].map((t) => (
-            <div key={t} className="card" style={{ padding: 18, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <div style={{ fontWeight: 700 }}>{t}</div>
-              <span className="badge">Global</span>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="why-ensa" title="WHY ENSA" subtitle="Hyderabad Advantage • Confidential Mandates • Cross-Border Commercial Intelligence" className="reduced-padding-bottom">
-        <div className="grid grid-3">
-          <div className="panel">
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Hyderabad Advantage</div>
-            <div className="muted">Proximity to India's pharma ecosystem enabling credible execution and partner access.</div>
-          </div>
-          <div className="panel">
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Confidential Mandates</div>
-            <div className="muted">Institutional engagement models with disciplined information handling and aligned incentives.</div>
-          </div>
-          <div className="panel">
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Cross-Border Intelligence</div>
-            <div className="muted">Commercial insights and regulatory mapping across EU, US, GCC and LATAM.</div>
-          </div>
-        </div>
-        <div className="card" style={{ padding: 24, borderLeft: '4px solid #1e82c9', width: '100%', marginTop: 24, marginBottom: 8 }}>
-            <div className="section-title">Our Philosophy</div>
-            <h4 style={{ color: '#1e82c9', marginBottom: 8, fontSize: '20px', fontWeight: 500 }}>At ENSA Pharma, we believe:</h4>
-            <p style={{ lineHeight: 1.6, color: 'var(--color-text)', marginBottom: 8 }}>
-              "Pharmaceutical growth is not driven by products alone — it is built on positioning, partnerships, and precision execution."
-            </p>
-          </div>
-      </Section>
-
-      <Section id="pharma-growth-ecosystem" title="Pharma Growth Ecosystem" subtitle="Connecting the global pharmaceutical value chain through strategic partnerships and commercial intelligence" className="reduced-padding">
-        <div className="grid grid-3">
-          <div className="card" style={{ padding: 20 }}>
-            <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>API Ecosystem</h4>
-            <p className="muted">Bridging manufacturers with global markets through structured commercial partnerships and long-term supply alignment.</p>
-          </div>
-          <div className="card" style={{ padding: 20 }}>
-            <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Formulation Network</h4>
-            <p className="muted">Connecting formulation companies with licensing opportunities and market expansion pathways across regulated territories.</p>
-          </div>
-          <div className="card" style={{ padding: 20 }}>
-            <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Service Providers</h4>
-            <p className="muted">Linking CROs, laboratories, and BA/BE centers with sponsor pipelines and strategic collaboration opportunities.</p>
-          </div>
-        </div>
-      </Section>
-
-      <Section id="strategic-partnerships" title="Strategic Partnerships" subtitle="Building long-term value through aligned partnerships and disciplined execution" className="reduced-padding">
-        <div className="grid grid-2">
-          <div className="card" style={{ padding: 20 }}>
-            <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Partnership Framework</h4>
-            <p className="muted">Structured engagement models ensuring confidentiality, aligned incentives, and sustainable growth trajectories for all stakeholders.</p>
-          </div>
-          <div className="card" style={{ padding: 20 }}>
-            <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Global Network</h4>
-            <p className="muted">Extensive network across EU, US, GCC, LATAM, and Asian markets enabling cross-border commercial expansion and regulatory navigation.</p>
-          </div>
-        </div>
-      </Section>
-
-      <Section id="market-intelligence" title="Market Intelligence" subtitle="Data-driven insights powering strategic pharmaceutical decisions" className="reduced-padding-bottom">
-        <div className="card" style={{ padding: 24, borderLeft: '4px solid #23b04d', width: '100%' }}>
-          <h4 style={{ color: '#23b04d', marginBottom: 12 }}>Commercial Intelligence Platform</h4>
-          <p className="muted" style={{ marginBottom: 16 }}>
-            Comprehensive market analysis, regulatory mapping, and competitive intelligence to inform strategic decision-making and opportunity identification across the pharmaceutical value chain.
+      <Section id="industry-sectors-we-serve" className="reduced-padding">
+        <div className="industry-sectors-wrapper">
+          <h2 className="industry-sectors-main-title">INDUSTRY SECTORS WE SERVE</h2>
+          <p className="industry-sectors-main-subtitle">Strategic partnerships across the pharmaceutical ecosystem</p>
+          <p className="industry-description">
+            ENSA Pharma works across key segments of pharmaceutical ecosystem, enabling strategic collaboration and growth opportunities for multiple industry stakeholders.
           </p>
-          <div className="grid grid-3" style={{ gap: 16 }}>
-            <div>
-              <h5 style={{ color: '#1e82c9', marginBottom: 8, fontSize: '16px' }}>Market Analysis</h5>
-              <p className="muted">Deep market insights and opportunity assessment across therapeutic areas and geographic regions.</p>
+          
+          <div className="industry-sectors-grid">
+            <div className="industry-sector">
+              <h3 className="industry-title">API Manufacturers</h3>
+              <p className="industry-description">
+                We support API manufacturers in expanding their global commercial reach and establishing long-term supply partnerships.
+              </p>
             </div>
-            <div>
-              <h5 style={{ color: '#1e82c9', marginBottom: 8, fontSize: '16px' }}>Regulatory Intelligence</h5>
-              <p className="muted">Regulatory pathway analysis and compliance strategies for global market entry.</p>
+            
+            <div className="industry-sector">
+              <h3 className="industry-title">Pharmaceutical Companies</h3>
+              <p className="industry-description">
+                For pharmaceutical companies, ENSA Pharma facilitates product licensing, portfolio expansion, and international market access strategies.
+              </p>
             </div>
-            <div>
-              <h5 style={{ color: '#1e82c9', marginBottom: 8, fontSize: '16px' }}>Competitive Landscape</h5>
-              <p className="muted">Comprehensive competitive analysis and positioning strategies for market success.</p>
+            
+            <div className="industry-sector">
+              <h3 className="industry-title">CROs and BA/BE Centers</h3>
+              <p className="industry-description">
+                We also collaborate with CROs and BA/BE centers, connecting them with sponsors seeking reliable partners for regulatory studies and clinical development programs.
+              </p>
+            </div>
+            
+            <div className="industry-sector">
+              <h3 className="industry-title">Investors and Strategic Funds</h3>
+              <p className="industry-description">
+                In addition, ENSA Pharma works with investors and strategic funds to identify high-potential pharmaceutical assets and facilitate mergers, acquisitions, and growth capital opportunities within the life sciences sector.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="strategic-partnerships" className="reduced-padding">
+        <div className="strategic-partnerships-wrapper">
+          <h2 className="strategic-partnerships-title">Strategic Partnerships</h2>
+          <p className="strategic-partnerships-subtitle">Building long-term value through aligned partnerships and disciplined execution</p>
+          <div className="grid grid-2">
+            <div className="card" style={{ padding: 20 }}>
+              <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Partnership Framework</h4>
+              <p className="muted">Structured engagement models ensuring confidentiality, aligned incentives, and sustainable growth trajectories for all stakeholders.</p>
+            </div>
+            <div className="card" style={{ padding: 20 }}>
+              <h4 style={{ color: '#1e82c9', marginBottom: 12 }}>Global Network</h4>
+              <p className="muted">Extensive network across EU, US, GCC, LATAM, and Asian markets enabling cross-border commercial expansion and regulatory navigation.</p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section id="market-intelligence" className="reduced-padding-bottom">
+        <div className="market-intelligence-container">
+          <div className="market-intelligence-header">
+            <h2 className="market-intelligence-title">MARKET INTELLIGENCE</h2>
+            <p className="market-intelligence-subtitle">Pharma Trends & Opportunities</p>
+            <div className="card philosophy-card">
+              <p className="market-intelligence-description">
+                At ENSA Pharma, we believe that informed decisions are driven by a deep understanding of industry dynamics and emerging opportunities.
+                The Insights and Market Intelligence section provides perspectives on key developments shaping the pharmaceutical industry.
+              </p>
+            </div>
+          </div>
+          
+          <div className="market-intelligence-content">
+            <div className="market-intelligence-main">
+              <h3 className="market-intelligence-subtitle">Areas of focus include:</h3>
+              <div className="market-intelligence-grid">
+                <div className="market-intelligence-item">
+                  <div className="market-intelligence-icon">📊</div>
+                  <h4>API supply chain trends</h4>
+                  <p>Real-time insights into global API manufacturing, sourcing strategies, and supply chain resilience.</p>
+                </div>
+                <div className="market-intelligence-item">
+                  <div className="market-intelligence-icon">🌍</div>
+                  <h4>Global licensing opportunities</h4>
+                  <p>Identification of strategic licensing partnerships across therapeutic areas and geographic markets.</p>
+                </div>
+                <div className="market-intelligence-item">
+                  <div className="market-intelligence-icon">⚖️</div>
+                  <h4>Regulatory developments</h4>
+                  <p>Analysis of regulatory changes across major markets and impact on market access strategies.</p>
+                </div>
+                <div className="market-intelligence-item">
+                  <div className="market-intelligence-icon">🔬</div>
+                  <h4>CRO and clinical partnerships</h4>
+                  <p>Insights into CRO landscape and clinical development collaboration opportunities.</p>
+                </div>
+                <div className="market-intelligence-item">
+                  <div className="market-intelligence-icon">💰</div>
+                  <h4>Pharmaceutical investment trends</h4>
+                  <p>Analysis of investment patterns, M&A activity, and funding opportunities in pharma.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="market-intelligence-outcome">
+              <div className="outcome-card">
+                <h4>Strategic Decision Making</h4>
+                <p>These insights help industry participants identify opportunities, anticipate market shifts, and make strategic decisions within the global pharmaceutical landscape.</p>
+                <div className="outcome-features">
+                  <div className="outcome-feature">
+                    <span className="outcome-icon">🎯</span>
+                    <span>Opportunity Identification</span>
+                  </div>
+                  <div className="outcome-feature">
+                    <span className="outcome-icon">📈</span>
+                    <span>Market Trend Analysis</span>
+                  </div>
+                  <div className="outcome-feature">
+                    <span className="outcome-icon">🤝</span>
+                    <span>Strategic Partnerships</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

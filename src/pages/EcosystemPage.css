@@ -1,0 +1,297 @@
+/* Ecosystem Page Styles - Using Project Design System */
+
+/* Base Styles */
+.ecosystem-page {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  background: var(--color-bg);
+}
+
+/* Hero Section - Matching Home Page Hero Styles */
+.ecosystem-hero-section {
+  position: relative;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ecosystem-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/services_ENSA.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 30vh;
+  transform: scale(1.1);
+  will-change: transform;
+}
+
+.ecosystem-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.ecosystem-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.ecosystem-hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+/* Value Proposition Marquee - Optimized Smooth Animation */
+.value-proposition-marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 24px 0;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000px;
+}
+
+.marquee-text {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  padding: 0 50px;
+  white-space: nowrap;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-33.33%) translateZ(0);
+  }
+}
+
+/* Pause on hover for better user experience */
+.value-proposition-marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation: none;
+  }
+  
+  .marquee-content {
+    transform: translateX(0);
+  }
+}
+
+.ecosystem-hero-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fffffff2;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Content Sections - Using Project Spacing */
+.ecosystem-content-wrapper {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--spacing-section) 0;
+}
+
+/* Section Headers - Project Style */
+.ecosystem-section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-section);
+}
+
+.ecosystem-section-title {
+  font-size: var(--heading-section);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.ecosystem-section-subtitle {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-dim);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography - Project Variables */
+.ecosystem-paragraph {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ecosystem-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Cards - Project Design System */
+.ecosystem-card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: all var(--transition-base);
+}
+
+.ecosystem-card:hover {
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transform: translateY(-2px);
+}
+
+/* Participant Styling */
+.ecosystem-participant-title {
+  font-size: var(--heading-card);
+  font-weight: var(--font-weight-subheading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-subheading);
+}
+
+.ecosystem-participant-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ecosystem-participant-list li {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.ecosystem-participant-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--text-body);
+}
+
+.ecosystem-participant-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid System - Project Spacing */
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-section);
+}
+
+/* Section Backgrounds - Project Colors */
+.ecosystem-section-white {
+  background: var(--color-bg);
+}
+
+.ecosystem-section-alt {
+  background: var(--color-bg-alt);
+}
+
+/* Result Section Special Layout */
+.ecosystem-result-section {
+  display: flex;
+  justify-content: center;
+}
+
+.ecosystem-result-card {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Visual Divider - Project Style */
+.ecosystem-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+  margin: var(--spacing-section) 0;
+  opacity: 0.6;
+}
+
+/* Responsive Design - Project Breakpoints */
+@media (max-width: 1024px) {
+  .ecosystem-content-wrapper {
+    padding: var(--space-12) var(--container-pad);
+  }
+  
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystem-hero-section {
+    min-height: 50vh;
+    background-attachment: scroll;
+  }
+  
+  .ecosystem-hero-description {
+    font-size: var(--text-body);
+  }
+  
+  .ecosystem-content-wrapper {
+    padding: var(--space-8) var(--container-pad);
+  }
+  
+  .ecosystem-section-title {
+    font-size: var(--heading-subsection);
+  }
+}
+
+@media (max-width: 480px) {
+  .ecosystem-content-wrapper {
+    padding: var(--space-6) var(--container-pad);
+  }
+  
+  .ecosystem-card {
+    padding: var(--space-6);
+  }
+}

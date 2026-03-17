@@ -1,99 +1,101 @@
 import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
+import './ContactPage.css'
 
 function ContactPage() {
   return (
-    <>
-      <Section title="Connect With ENSA Pharma LLP" subtitle="Strategic pharmaceutical partnerships and confidential transaction facilitation." className="reduced-padding reduced-padding-bottom">
-        <div style={{ display: 'grid', gap: 24, maxWidth: '100%' }}>
-          <div className="card" style={{ padding: 20, borderLeft: '4px solid #1e82c9', width: '100%' }}>
-            <p style={{ lineHeight: 1.6, color: 'var(--color-text)', marginBottom: 20 }}>
-              Engage with a mandate to explore API commercialization, licensing, M&A, laboratory or BA/BE representation, and capital pathways. Our institutional approach ensures confidentiality, precision, and sustainable value creation across global pharmaceutical ecosystems.
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 20 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#1e82c9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '18px' }}>📍</div>
-                <div>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Headquarters</div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Hyderabad, India</div>
-                </div>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#1e82c9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '18px' }}>🌍</div>
-                <div>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Global Reach</div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>International pharmaceutical markets</div>
-                </div>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#1e82c9', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '18px' }}>🔒</div>
-                <div>
-                  <div style={{ fontWeight: 600, marginBottom: 4 }}>Confidential Mandates</div>
-                  <div style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Discreet transaction facilitation</div>
-                </div>
-              </div>
+    <div className="contactpage-page">
+      <Section className="reduced-padding reduced-padding-bottom contactpage-hero-section">
+        <div className="contactpage-hero-content">
+          <div className="contactpage-header">
+            <h1 className="contactpage-title">Partner with ENSA Pharma</h1>
+            <p className="contactpage-subtitle">Strategic pharmaceutical partnerships & confidential transaction facilitation.</p>
+          </div>
+          <div className="contactpage-cards-container">
+            <div className="contactpage-opportunity-card">
+              <div className="contactpage-card-icon">🌍</div>
+              <h3 className="contactpage-card-title">Global Market Access</h3>
+              <p className="contactpage-card-text">
+                Whether you are an API manufacturer seeking global market access, a pharmaceutical company exploring licensing opportunities, a CRO looking to expand sponsor partnerships, or an investor identifying high-potential pharmaceutical assets, ENSA Pharma provides a strategic platform that connects you with the right opportunities.
+              </p>
+            </div>
+            
+            <div className="contactpage-network-card">
+              <div className="contactpage-card-icon">🤝</div>
+              <h3 className="contactpage-card-title">Strategic Network</h3>
+              <p className="contactpage-card-text">
+                Through its global network and structured advisory approach, ENSA Pharma facilitates partnerships that support product commercialization, market expansion, and long-term business growth.
+              </p>
+            </div>
+            
+            <div className="contactpage-growth-card">
+              <div className="contactpage-card-icon">🚀</div>
+              <h3 className="contactpage-card-title">Accelerated Growth</h3>
+              <p className="contactpage-card-text">
+                Partner with ENSA Pharma to explore new collaborations, unlock strategic opportunities, and accelerate your journey in the global pharmaceutical industry.
+              </p>
             </div>
           </div>
         </div>
       </Section>
       
-      <Section title="Get In Touch" subtitle="Initiate a confidential discussion about your pharmaceutical objectives." className="reduced-padding">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, alignItems: 'start' }}>
+      <Section title="Get In Touch" subtitle="Initiate a confidential discussion about your pharmaceutical objectives." className="reduced-padding contactpage-form-section">
+        <div className="contactpage-form-grid">
           <div>
             <ContactForm />
           </div>
-          <div style={{ display: 'grid', gap: 20 }}>
-            <div className="card" style={{ padding: 18, borderLeft: '4px solid #1e82c9' }}>
-              <h4 style={{ color: '#1e82c9', marginBottom: 10, fontSize: '16px', fontWeight: 600 }}>Strategic Partnership Areas</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '12px' }}>●</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>API Marketing & Commercialization</span>
+          <div className="contactpage-form-column">
+            <div className="contactpage-info-card">
+              <h4 className="contactpage-info-title">Strategic Partnership Areas</h4>
+              <ul className="contactpage-partnership-list">
+                <li className="contactpage-partnership-item">
+                  <span className="contactpage-partnership-bullet">●</span>
+                  <span>API Marketing & Commercialization</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '12px' }}>●</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>In-Licensing & Out-Licensing</span>
+                <li className="contactpage-partnership-item">
+                  <span className="contactpage-partnership-bullet">●</span>
+                  <span>In-Licensing & Out-Licensing</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '12px' }}>●</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Pharma M&A Advisory</span>
+                <li className="contactpage-partnership-item">
+                  <span className="contactpage-partnership-bullet">●</span>
+                  <span>Pharma M&A Advisory</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '12px' }}>●</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Laboratory & BA/BE Representation</span>
+                <li className="contactpage-partnership-item">
+                  <span className="contactpage-partnership-bullet">●</span>
+                  <span>Laboratory & BA/BE Representation</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '12px' }}>●</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Capital Advisory & Fundraising</span>
+                <li className="contactpage-partnership-item">
+                  <span className="contactpage-partnership-bullet">●</span>
+                  <span>Capital Advisory & Fundraising</span>
                 </li>
               </ul>
             </div>
             
-            <div className="card" style={{ padding: 18, borderLeft: '4px solid #1e82c9' }}>
-              <h4 style={{ color: '#1e82c9', marginBottom: 10, fontSize: '16px', fontWeight: 600 }}>Why Choose ENSA</h4>
-              <div style={{ display: 'grid', gap: 12 }}>
-                <div style={{ display: 'flex', alignItems: 'start', gap: 10 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '14px', marginTop: 2 }}>✓</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Boardroom-first orientation with institutional approach</span>
+            <div className="contactpage-info-card">
+              <h4 className="contactpage-info-title">Why Choose ENSA</h4>
+              <div className="contactpage-why-list">
+                <div className="contactpage-why-item">
+                  <span className="contactpage-why-check">✓</span>
+                  <span>Boardroom-first orientation with institutional approach</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'start', gap: 10 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '14px', marginTop: 2 }}>✓</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Confidential mandate-driven engagement</span>
+                <div className="contactpage-why-item">
+                  <span className="contactpage-why-check">✓</span>
+                  <span>Confidential mandate-driven engagement</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'start', gap: 10 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '14px', marginTop: 2 }}>✓</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Global regulatory exposure through Masuu Global Solutions</span>
+                <div className="contactpage-why-item">
+                  <span className="contactpage-why-check">✓</span>
+                  <span>Global regulatory exposure through Masuu Global Solutions</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'start', gap: 10 }}>
-                  <span style={{ color: '#1e82c9', fontSize: '14px', marginTop: 2 }}>✓</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '14px' }}>Disciplined documentation alignment and execution</span>
+                <div className="contactpage-why-item">
+                  <span className="contactpage-why-check">✓</span>
+                  <span>Disciplined documentation alignment and execution</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </Section>
-    </>
+    </div>
   )
 }
 

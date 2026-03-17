@@ -10,26 +10,46 @@
   --text-secondary: #5f6f7f; /* Secondary Text Gray */
   --text-on-dark: #e3eaf1;   /* Light text for dark sections */
 
-  /* Typography */
-  --font-size-h1: 52px;        /* Main page titles */
-  --font-size-h2: 36px;        /* Section titles */
-  --font-size-h3: 28px;        /* Card titles, subsections */
-  --font-size-h4: 22px;        /* Subheadings */
-  --font-size-h5: 20px;        /* Small subheadings */
-  --font-size-body: 18px;       /* Body text */
-  --font-size-small: 16px;      /* Small text */
-  --font-size-xs: 14px;         /* Extra small text */
+  /* Typography - Consistent Hierarchy */
+  --font-size-h1: 52px;        /* Main page titles - Hero */
+  --font-size-h2: 36px;        /* Section titles - Main headings */
+  --font-size-h3: 28px;        /* Subsection titles - Card titles */
+  --font-size-h4: 22px;        /* Subheadings - Small headings */
+  --font-size-h5: 20px;        /* Further subheadings */
+  --font-size-body: 18px;      /* Body text - Paragraphs */
+  --font-size-small: 16px;     /* Small text - Secondary info */
+  --font-size-xs: 14px;        /* Extra small text - Labels */
   
-  /* Line Heights */
+  /* Typography Hierarchy - Complete System */
+  --heading-main: var(--font-size-h1);
+  --heading-section: var(--font-size-h2);
+  --heading-subsection: var(--font-size-h3);
+  --heading-card: var(--font-size-h4);
+  --heading-small: var(--font-size-h5);
+  --text-body: var(--font-size-body);
+  --text-secondary: var(--font-size-small);
+  --text-label: var(--font-size-xs);
+  
+  /* Line Heights - Consistent Pattern */
+  --line-height-heading: 1.1;  /* Tight for headings */
+  --line-height-subheading: 1.2; /* Slightly relaxed */
+  --line-height-body: 1.6;     /* Relaxed for readability */
   --line-height-tight: 1.1;
   --line-height-normal: 1.4;
   --line-height-relaxed: 1.6;
   
-  /* Letter Spacing */
+  /* Letter Spacing - Consistent Pattern */
+  --letter-spacing-heading: -0.02em; /* Tight for large headings */
+  --letter-spacing-subheading: -0.01em; /* Slightly tight */
+  --letter-spacing-body: 0; /* Normal for body */
   --letter-spacing-tight: 0.2px;
   --letter-spacing-normal: 0.4px;
   
-  /* Font Weights */
+  /* Font Weights - Hierarchy */
+  --font-weight-heading: 700;   /* Bold for main headings */
+  --font-weight-subheading: 600; /* Semibold for subheadings */
+  --font-weight-body: 400;      /* Normal for body */
+  --font-weight-emphasis: 500;  /* Medium for emphasis */
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -71,6 +91,24 @@
 
   --container-max: 1280px;
   --container-pad: 24px;
+
+  /* Consistent Spacing System */
+  --spacing-xs: var(--space-1);      /* 4px */
+  --spacing-sm: var(--space-2);      /* 8px */
+  --spacing-md: var(--space-3);      /* 12px */
+  --spacing-lg: var(--space-4);      /* 16px */
+  --spacing-xl: var(--space-5);      /* 20px */
+  --spacing-2xl: var(--space-6);     /* 24px */
+  --spacing-3xl: var(--space-8);     /* 32px */
+  --spacing-4xl: var(--space-12);    /* 48px */
+  --spacing-5xl: var(--space-16);    /* 64px */
+  --spacing-6xl: var(--space-20);    /* 80px */
+  
+  /* Component Spacing - Consistent Pattern */
+  --spacing-element: var(--spacing-lg);      /* Between elements */
+  --spacing-component: var(--spacing-3xl);   /* Between components */
+  --spacing-section: var(--spacing-5xl);     /* Between sections */
+  --spacing-block: var(--spacing-2xl);       /* Within blocks */
 
   --shadow-sm: 0 4px 16px rgba(30, 130, 201, 0.12);
   --shadow-md: 0 10px 30px rgba(30, 130, 201, 0.2);
@@ -175,17 +213,14 @@ html {
   border-color: rgba(255, 255, 255, 0.95);
 }
 
-.section {
+/* .section {
   padding: var(--space-12) 0;
-}
+} */
 
 .strategic-positioning {
   padding-top: var(--space-12) !important;
 }
 
-.reduced-padding {
-  padding-top: var(--space-8) !important;
-}
 
 .reduced-padding-bottom {
   padding-bottom: var(--space-8) !important;
@@ -196,19 +231,102 @@ html {
   flex-direction: column;
   gap: 12px;
   margin-bottom: var(--space-8);
+  margin-top: 30px ;
 }
 
-.section-title {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
+/* Global Typography Classes - Consistent Hierarchy */
+.heading-main {
+  font-size: var(--heading-main);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
   color: var(--color-primary);
-  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xl);
 }
 
-.section-subtitle {
+.heading-section {
+  font-size: var(--heading-section);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.heading-subsection {
+  font-size: var(--heading-subsection);
+  font-weight: var(--font-weight-subheading);
+  line-height: var(--line-height-subheading);
+  letter-spacing: var(--letter-spacing-subheading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.heading-card {
+  font-size: var(--heading-card);
+  font-weight: var(--font-weight-subheading);
+  line-height: var(--line-height-subheading);
+  letter-spacing: var(--letter-spacing-subheading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.heading-small {
+  font-size: var(--heading-small);
+  font-weight: var(--font-weight-emphasis);
+  line-height: var(--line-height-body);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+.text-secondary {
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
   color: var(--color-text-dim);
+  margin-bottom: var(--spacing-md);
+}
+
+.text-label {
+  font-size: var(--text-label);
+  font-weight: var(--font-weight-emphasis);
+  line-height: var(--line-height-body);
+  color: var(--color-text-dim);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Consistent Spacing Classes */
+.spacing-element { margin-bottom: var(--spacing-element); }
+.spacing-component { margin-bottom: var(--spacing-component); }
+.spacing-section { margin-bottom: var(--spacing-section); }
+.spacing-block { margin-bottom: var(--spacing-block); }
+
+/* Section Headers - Consistent Pattern */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-section);
+  text-align: center;
+}
+
+.section-header .heading-section {
+  margin-bottom: 0;
+}
+
+.section-header .text-secondary {
+  margin-bottom: 0;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid {

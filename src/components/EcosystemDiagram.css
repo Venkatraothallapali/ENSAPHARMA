@@ -1,0 +1,312 @@
+/* Ultra-Premium Pharma Ecosystem Diagram */
+
+.ecosystem-diagram-premium {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* SVG Layer */
+.ecosystem-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Animated Flowing Paths */
+.flow-path {
+  stroke-dasharray: 8 4;
+  animation: flow 3s linear infinite;
+}
+
+.flow-path-reverse {
+  stroke-dasharray: 8 4;
+  animation: flow-reverse 3s linear infinite;
+}
+
+@keyframes flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes flow-reverse {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 40;
+  }
+}
+
+/* Nodes Container */
+.ecosystem-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Base Node Styles */
+.ecosystem-node {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+}
+
+.ecosystem-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Node Content */
+.node-content h3,
+.node-content h4 {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.node-content h3 {
+  font-size: 14px;
+}
+
+.node-content h4 {
+  font-size: 11px;
+}
+
+.node-content p {
+  margin: 0;
+  font-size: 9px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Center Node - ENSA PHARMA */
+.center-node {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.05);
+  background: linear-gradient(135deg, #23b04d 0%, #1a8a3a 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 32px rgba(35, 176, 77, 0.25);
+  min-width: 140px;
+  padding: 18px;
+}
+
+.center-node .node-content h3 {
+  font-size: 16px;
+  color: white;
+}
+
+.center-node .node-content p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.center-node:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 12px 40px rgba(35, 176, 77, 0.35);
+}
+
+/* Top Node - Investors */
+.top-node {
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #1e82c9 0%, #1565a0 100%);
+  color: white;
+  border: none;
+}
+
+.top-node .node-content h4,
+.top-node .node-content p {
+  color: white;
+}
+
+.top-node:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 32px rgba(30, 130, 201, 0.25);
+}
+
+/* Left Node - API Manufacturers */
+.left-node {
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+}
+
+.left-node .node-content h4,
+.left-node .node-content p {
+  color: white;
+}
+
+.left-node:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.25);
+}
+
+/* Right Node - Pharmaceutical Companies */
+.right-node {
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+}
+
+.right-node .node-content h4,
+.right-node .node-content p {
+  color: white;
+}
+
+.right-node:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.25);
+}
+
+/* Bottom Node - CRO/BA-BE Centers */
+.bottom-node {
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+  color: white;
+  border: none;
+}
+
+.bottom-node .node-content h4,
+.bottom-node .node-content p {
+  color: white;
+}
+
+.bottom-node:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.25);
+}
+
+/* Description */
+.ecosystem-description {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.ecosystem-description p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecosystem-diagram-premium {
+    height: 600px;
+    border-radius: 16px;
+  }
+  
+  .ecosystem-node {
+    min-width: 140px;
+    padding: 16px;
+  }
+  
+  .center-node {
+    min-width: 160px;
+    padding: 20px;
+  }
+  
+  .node-content h3 {
+    font-size: 16px;
+  }
+  
+  .node-content h4 {
+    font-size: 12px;
+  }
+  
+  .node-content p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecosystem-diagram-premium {
+    height: 500px;
+    border-radius: 12px;
+  }
+  
+  .ecosystem-node {
+    min-width: 120px;
+    padding: 12px;
+  }
+  
+  .center-node {
+    min-width: 140px;
+    padding: 16px;
+  }
+  
+  .top-node {
+    top: 60px;
+  }
+  
+  .left-node {
+    left: 20px;
+  }
+  
+  .right-node {
+    right: 20px;
+  }
+  
+  .bottom-node {
+    bottom: 60px;
+  }
+  
+  .ecosystem-description p {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ecosystem-diagram-premium {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  }
+  
+  .ecosystem-description p {
+    background: rgba(0, 0, 0, 0.6);
+    color: #cbd5e0;
+  }
+}
