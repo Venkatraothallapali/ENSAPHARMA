@@ -1,6 +1,6 @@
 import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
-import './ContactPage.css'
+import './contactpage.css'
 
 function ContactPage() {
   return (
