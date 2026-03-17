@@ -3,12 +3,13 @@ type SectionProps = {
   subtitle?: string
   accent?: boolean
   className?: string
+  id?: string
   children: React.ReactNode
 }
 
-function Section({ title, subtitle, accent, className, children }: SectionProps) {
+function Section({ title, subtitle, accent, className, id, children }: SectionProps) {
   return (
-    <section className={`section ${accent ? 'accent-bg' : ''} ${className ?? ''}`}>
+    <section id={id} className={`section ${accent ? 'accent-bg' : ''} ${className ?? ''}`}>
       <div className="container">
         {(title || subtitle) && (
           <div className="section-header">

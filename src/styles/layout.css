@@ -23,15 +23,15 @@
 }
 .navbar.solid {
   background: var(--white);
-  border-color: var(--color-border);
-  box-shadow: 0 8px 24px rgba(14, 42, 71, 0.06);
+  border-color: rgba(227, 234, 241, 0.3);
+  box-shadow: 0 1px 3px rgba(14, 42, 71, 0.04);
 }
 
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 72px;
   gap: 40px;
 }
 
@@ -39,9 +39,9 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 0.4px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.3px;
 }
 
 .brand-badge {
@@ -55,8 +55,8 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-left: -15px;
+  gap: 32px;
+  margin-left: 40px;
 }
 
 .nav-dropdown { position: relative; padding-bottom: 0px; }
@@ -89,12 +89,14 @@
 .dropdown-divider { height: 1px; background: var(--color-border); margin: 6px 4px; }
 
 .nav-link {
-  padding: 8px 10px;
-  border-radius: 10px;
+  padding: 8px 0;
+  border-radius: 0;
   color: var(--color-text);
   position: relative;
   transition: color 200ms ease;
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
 }
 
 .navbar.transparent .nav-link { color: var(--white); }
@@ -104,15 +106,14 @@
 .nav-link::after {
   content: "";
   position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 4px;
-  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
   background: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 260ms ease;
-  border-radius: 2px;
 }
 .nav-link:hover::after { transform: scaleX(1); }
 .nav-link.active::after { transform: scaleX(1); }
@@ -318,8 +319,8 @@
 }
 
 .hero {
-  padding: 32px 0 24px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #eef3f7 100%);
+  /* padding: 0px 0 16px 0; */
+  background: transparent;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
 }
@@ -331,18 +332,23 @@
   gap: 24px;
   grid-template-columns: 2fr 1fr;
   align-items: center;
+  min-height: 450px;
 }
 
 .hero-title {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.1;
   margin: 0 0 12px 0;
   color: var(--color-primary);
+  background: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .hero-subtitle {
   font-size: 18px;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
@@ -353,7 +359,7 @@
 }
 
 .hero-text {
-  color: var(--text-secondary);
+  color: #ffffff;
   margin-bottom: 14px;
   max-width: 700px;
   line-height: 1.6;
@@ -588,85 +594,166 @@
   opacity: 0.7;
 }
 
-/* Orbit Component Styles */
+/* Premium Orbit Component Styles - Futuristic Consulting Interface */
 .orbit-container {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 380px;
+  height: 380px;
   margin: 0 auto;
+  perspective: 1000px;
+  margin-top: -40px;
 }
 
+/* Central Core - Premium Intelligence Hub */
 .orbit-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background: #1e82c9;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #1e82c9 0%, #2a8fd6 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  position: relative;
+}
+
+.core-glow {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: radial-gradient(circle, rgba(30, 130, 201, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: core-pulse 4s ease-in-out infinite;
+}
+
+.core-text {
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
-  box-shadow: 0 4px 12px rgba(30, 130, 201, 0.3);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
   z-index: 2;
 }
 
+/* Primary Orbit Ring - Elegant Data Ring */
 .orbit-ring {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  width: 400px;
-  height: 400px;
+  width: 340px;
+  height: 340px;
   transform: translate(-50%, -50%);
-  animation: rotate 25s linear infinite;
+  animation: rotate-smooth 60s linear infinite;
+  border: 1px solid rgba(30, 130, 201, 0.2);
+  border-radius: 50%;
+  position: relative;
 }
 
+.ring-glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(30, 130, 201, 0.1), rgba(35, 176, 77, 0.05), rgba(30, 130, 201, 0.1));
+  animation: ring-glow-pulse 3s ease-in-out infinite alternate;
+}
+
+/* Floating Node Cards - Premium Pill Cards */
 .orbit-item {
   position: absolute;
-  background: white;
-  border: 2px solid #23b04d;
-  border-radius: 20px;
-  padding: 10px 18px;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-primary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  animation: counter-rotate 25s linear infinite;
+  animation: counter-rotate-smooth 60s linear infinite;
 }
 
+.node-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(35, 176, 77, 0.3);
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  box-shadow: 
+    0 4px 16px rgba(30, 130, 201, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: fit-content;
+  white-space: nowrap;
+}
+
+.node-glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: radial-gradient(circle, rgba(35, 176, 77, 0.1) 0%, transparent 70%);
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.node-card:hover {
+  transform: scale(1.05);
+  border-color: rgba(35, 176, 77, 0.6);
+  box-shadow: 
+    0 8px 24px rgba(30, 130, 201, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.node-card:hover .node-glow {
+  opacity: 1;
+}
+
+.node-text {
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+/* Node Positioning - Perfect Orbit Alignment */
 .orbit-item-1 {
-  top: 0;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .orbit-item-2 {
   top: 50%;
-  right: 0;
+  right: 0%;
   transform: translateY(-50%);
 }
 
 .orbit-item-3 {
-  bottom: 0;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .orbit-item-4 {
   top: 50%;
-  left: 0;
+  left: 0%;
   transform: translateY(-50%);
 }
 
-@keyframes rotate {
+/* Premium Animations - Ultra Smooth & Natural */
+@keyframes rotate-smooth {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
@@ -675,7 +762,7 @@
   }
 }
 
-@keyframes counter-rotate {
+@keyframes counter-rotate-smooth {
   from {
     transform: translateX(-50%) rotate(0deg);
   }
@@ -684,43 +771,61 @@
   }
 }
 
-.orbit-item-2 {
-  animation: counter-rotate-2 25s linear infinite;
-}
-
-.orbit-item-3 {
-  animation: counter-rotate-3 25s linear infinite;
-}
-
-.orbit-item-4 {
-  animation: counter-rotate-4 25s linear infinite;
-}
-
-@keyframes counter-rotate-2 {
-  from {
-    transform: translateY(-50%) rotate(0deg);
+@keyframes core-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
   }
-  to {
-    transform: translateY(-50%) rotate(-360deg);
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
-@keyframes counter-rotate-3 {
-  from {
-    transform: translateX(-50%) rotate(0deg);
+@keyframes ring-glow-pulse {
+  0% {
+    opacity: 0.3;
   }
-  to {
-    transform: translateX(-50%) rotate(-360deg);
+  100% {
+    opacity: 0.7;
   }
 }
 
-@keyframes counter-rotate-4 {
-  from {
-    transform: translateY(-50%) rotate(0deg);
-  }
-  to {
-    transform: translateY(-50%) rotate(-360deg);
-  }
+/* Micro floating effects for nodes */
+.orbit-item-1 .node-card {
+  animation: float-1 8s ease-in-out infinite;
+}
+
+.orbit-item-2 .node-card {
+  animation: float-2 9s ease-in-out infinite;
+}
+
+.orbit-item-3 .node-card {
+  animation: float-3 10s ease-in-out infinite;
+}
+
+.orbit-item-4 .node-card {
+  animation: float-4 11s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(-50%) translateX(0px); }
+  50% { transform: translateY(-50%) translateX(-3px); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(3px); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translateY(-50%) translateX(0px); }
+  50% { transform: translateY(-50%) translateX(3px); }
 }
 
 /* Responsive Design - Enhanced for All Devices */
@@ -728,12 +833,17 @@
 /* Tablet and Small Desktop */
 @media (max-width: 1200px) {
   .orbit-container {
-    width: 400px;
-    height: 400px;
+    width: 340px;
+    height: 340px;
+  }
+  
+  .orbit-ring {
+    width: 300px;
+    height: 300px;
   }
   
   .hero-grid {
-    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
   }
 }
 
@@ -743,16 +853,18 @@
     display: none;
   }
   
+  .orbit-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .orbit-ring {
+    width: 260px;
+    height: 260px;
+  }
+  
   .nav-toggle {
-    display: flex;
-  }
-  
-  .nav-mobile {
-    display: flex;
-  }
-  
-  .nav-inner {
-    gap: 20px;
+    display: block;
   }
   
   .brand {
@@ -860,6 +972,18 @@
     height: 280px;
   }
   
+  .orbit-ring {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .orbit-item {
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 12px;
+    max-width: 60px;
+  }
+  
   .hero-title {
     font-size: 22px;
   }
@@ -908,6 +1032,23 @@
 
 /* Extra Small Mobile */
 @media (max-width: 480px) {
+  .orbit-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .orbit-ring {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orbit-item {
+    padding: 4px 8px;
+    font-size: 10px;
+    border-radius: 10px;
+    max-width: 50px;
+  }
+  
   .hero-title {
     font-size: 20px;
   }
@@ -932,10 +1073,20 @@
     padding: 8px 14px;
     font-size: 13px;
   }
-  
+}
+
+/* Ultra Small Mobile */
+@media (max-width: 380px) {
   .orbit-container {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .orbit-item {
+    padding: 3px 6px;
+    font-size: 9px;
+    border-radius: 8px;
+    max-width: 45px;
   }
 }
 

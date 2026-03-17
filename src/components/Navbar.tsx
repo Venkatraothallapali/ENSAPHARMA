@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
   
   const handleLinkClick = () => {
     window.scrollTo(0, 0)
@@ -13,6 +15,32 @@ function Navbar() {
   
   const handleServiceClick = () => {
     setServicesOpen(false)
+  }
+  
+  const handleScrollToSection = (sectionId: string) => {
+    setOpen(false)
+    setServicesOpen(false)
+    
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        scrollToSection(sectionId)
+      }, 100)
+    } else {
+      scrollToSection(sectionId)
+    }
+  }
+  
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const navbarHeight = 72
+      const elementPosition = element.offsetTop - navbarHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
+    }
   }
   
   const services = [
@@ -56,8 +84,23 @@ function Navbar() {
               <Link to="/services" className="dropdown-item muted" onClick={handleLinkClick}>All Services</Link>
             </div>
           </div>
+          <button className="nav-link" onClick={() => handleScrollToSection('pharma-growth-ecosystem')}>
+            Ecosystem
+          </button>
+          <button className="nav-link" onClick={() => handleScrollToSection('our-strategic-approach')}>
+            Approach
+          </button>
+          <button className="nav-link" onClick={() => handleScrollToSection('industry-sectors-we-serve')}>
+            Sectors
+          </button>
+          <button className="nav-link" onClick={() => handleScrollToSection('strategic-partnerships')}>
+            Partnerships
+          </button>
+          <button className="nav-link" onClick={() => handleScrollToSection('market-intelligence')}>
+            Insights
+          </button>
           <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} onClick={handleLinkClick}>
-            Contact
+            Contact Us
           </NavLink>
         </nav>
         <button className="mobile-toggle" onClick={() => setOpen((v) => !v)} aria-label="Toggle navigation">
@@ -82,6 +125,21 @@ function Navbar() {
               </Link>
             ))}
           </div>
+          <button onClick={() => handleScrollToSection('pharma-growth-ecosystem')} className="mobile-link">
+            Ecosystem
+          </button>
+          <button onClick={() => handleScrollToSection('our-strategic-approach')} className="mobile-link">
+            Approach
+          </button>
+          <button onClick={() => handleScrollToSection('industry-sectors-we-serve')} className="mobile-link">
+            Sectors
+          </button>
+          <button onClick={() => handleScrollToSection('strategic-partnerships')} className="mobile-link">
+            Partnerships
+          </button>
+          <button onClick={() => handleScrollToSection('market-intelligence')} className="mobile-link">
+            Insights
+          </button>
           <NavLink to="/contact" onClick={handleLinkClick} className="mobile-link">
             Contact
           </NavLink>
