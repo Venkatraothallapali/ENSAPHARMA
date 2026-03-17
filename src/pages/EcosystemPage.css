@@ -24,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/services_ENSA.png);
+  background-image: url(/global_map_ENSA.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,6 +56,15 @@
   max-width: 850px;
   margin: 0 auto;
   padding-bottom: 60px;
+}
+
+.ecosystem-hero-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #fffffff2;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Value Proposition Marquee - Optimized Smooth Animation */
@@ -113,15 +122,6 @@
   }
 }
 
-.ecosystem-hero-description {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #fffffff2;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-  text-align: center;
-}
-
 /* Content Sections - Using Project Spacing */
 .ecosystem-content-wrapper {
   max-width: var(--container-max);
@@ -176,6 +176,7 @@
   background: var(--color-surface);
   box-shadow: 0 4px 12px var(--color-shadow);
   transition: all var(--transition-base);
+  height: 100%;
 }
 
 .ecosystem-card:hover {
@@ -183,7 +184,21 @@
   transform: translateY(-2px);
 }
 
-/* Participant Styling */
+.ecosystem-result-card {
+  padding: var(--space-10);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: all var(--transition-base);
+}
+
+.ecosystem-result-card:hover {
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transform: translateY(-2px);
+}
+
+/* Participant Titles */
 .ecosystem-participant-title {
   font-size: var(--heading-card);
   font-weight: var(--font-weight-subheading);
@@ -192,39 +207,44 @@
   line-height: var(--line-height-subheading);
 }
 
-.ecosystem-participant-list {
+/* Benefits List */
+.ecosystem-benefits-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.ecosystem-participant-list li {
+.ecosystem-benefits-list li {
   font-size: var(--text-body);
   font-weight: var(--font-weight-body);
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
-  position: relative;
   padding-left: var(--spacing-lg);
+  position: relative;
+  line-height: var(--line-height-body);
 }
 
-.ecosystem-participant-list li::before {
+.ecosystem-benefits-list li::before {
   content: '•';
-  position: absolute;
-  left: 0;
   color: var(--color-primary);
   font-weight: var(--font-weight-heading);
-  font-size: var(--text-body);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.ecosystem-participant-list li:last-child {
+.ecosystem-benefits-list li:last-child {
   margin-bottom: 0;
 }
 
 /* Grid System - Project Spacing */
 .ecosystem-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-section);
+}
+
+.ecosystem-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* Section Backgrounds - Project Colors */
@@ -236,17 +256,6 @@
   background: var(--color-bg-alt);
 }
 
-/* Result Section Special Layout */
-.ecosystem-result-section {
-  display: flex;
-  justify-content: center;
-}
-
-.ecosystem-result-card {
-  max-width: 800px;
-  text-align: center;
-}
-
 /* Visual Divider - Project Style */
 .ecosystem-divider {
   height: 1px;
@@ -255,15 +264,51 @@
   opacity: 0.6;
 }
 
+/* Impact Grid */
+.ecosystem-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-section);
+}
+
+.ecosystem-impact-item {
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.ecosystem-impact-number {
+  font-size: var(--heading-main);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-heading);
+}
+
+.ecosystem-impact-label {
+  font-size: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-normal);
+}
+
 /* Responsive Design - Project Breakpoints */
 @media (max-width: 1024px) {
   .ecosystem-content-wrapper {
     padding: var(--space-12) var(--container-pad);
   }
   
-  .ecosystem-grid {
+  .ecosystem-grid-2 {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  }
+  
+  .ecosystem-impact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -273,16 +318,16 @@
     background-attachment: scroll;
   }
   
-  .ecosystem-hero-description {
-    font-size: var(--text-body);
-  }
-  
   .ecosystem-content-wrapper {
     padding: var(--space-8) var(--container-pad);
   }
   
   .ecosystem-section-title {
     font-size: var(--heading-subsection);
+  }
+  
+  .ecosystem-result-card {
+    padding: var(--space-8);
   }
 }
 
@@ -293,5 +338,13 @@
   
   .ecosystem-card {
     padding: var(--space-6);
+  }
+  
+  .ecosystem-result-card {
+    padding: var(--space-6);
+  }
+  
+  .ecosystem-impact-item {
+    padding: var(--space-4);
   }
 }
