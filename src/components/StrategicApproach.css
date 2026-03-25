@@ -1,0 +1,30 @@
+/* Strategic Approach Component */
+
+.home-strategic-approach-wrapper {
+  padding: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.home-strategic-approach-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.home-strategic-approach-subtitle {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  max-width: 800px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-strategic-approach-content {
+  margin-top: 40px;
+}

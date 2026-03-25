@@ -2,7 +2,7 @@ function PrivacyPolicy() {
   return (
     <div className="legal-page">
       <div className="legal-header">
-        <div className="container">
+        <div className="global-container">
           <h1>Privacy Policy</h1>
           <p className="legal-subtitle">Protecting your privacy while delivering pharmaceutical intelligence services.</p>
           <div className="legal-meta">
@@ -13,7 +13,7 @@ function PrivacyPolicy() {
       </div>
 
       <div className="legal-content">
-        <div className="container">
+        <div className="global-container">
           <div className="legal-toc">
             <h3>Table of Contents</h3>
             <nav className="toc-nav">
@@ -104,7 +104,7 @@ function PrivacyPolicy() {
               <div className="section-content">
                 <p>For privacy-related questions or to exercise your rights:</p>
                 
-                <div className="contact-grid">
+                <div className="privacy-contact-grid">
                   <div className="contact-item">
                     <h4>Privacy Inquiries</h4>
                     <p>Email: privacy@ensa.com</p>

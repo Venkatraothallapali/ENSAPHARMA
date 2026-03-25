@@ -35,8 +35,8 @@ function ContactForm() {
         </select>
         <textarea rows={5} placeholder="Message *" value={form.message} onChange={(e) => update('message', e.target.value)} required />
         <div style={{ display: 'flex', gap: 10 }}>
-          <button className="btn btn-primary" type="submit">Submit</button>
-          <button className="btn btn-ghost" type="reset" onClick={() => setForm({ name: '', company: '', email: '', phone: '', interest: '', message: '' })}>Reset</button>
+          <button className="global-btn global-btn-primary" type="submit">Submit</button>
+          <button className="global-btn global-btn-ghost" type="reset" onClick={() => setForm({ name: '', company: '', email: '', phone: '', interest: '', message: '' })}>Reset</button>
         </div>
       </div>
     </form>

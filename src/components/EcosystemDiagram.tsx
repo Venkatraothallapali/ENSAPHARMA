@@ -137,7 +137,7 @@ const EcosystemDiagram = () => {
           {/* Center Node - ENSA PHARMA */}
           <div className="ecosystem-node center-node">
             <div className="node-content">
-              <h3>ENSA PHARMA</h3>
+              <h3>CRO / BA / BE Partnerships</h3>
               <p>Strategic Connector</p>
             </div>
           </div>
@@ -145,7 +145,7 @@ const EcosystemDiagram = () => {
           {/* Top Node - Investors */}
           <div className="ecosystem-node top-node">
             <div className="node-content">
-              <h4>INVESTORS</h4>
+              <h4>API Marketing</h4>
               <p>Capital Advisory</p>
             </div>
           </div>
@@ -153,7 +153,7 @@ const EcosystemDiagram = () => {
           {/* Left Node - API Manufacturers */}
           <div className="ecosystem-node left-node">
             <div className="node-content">
-              <h4>API MANUFACTURERS</h4>
+              <h4>Global servicing </h4>
               <p>Partnerships</p>
             </div>
           </div>
@@ -161,7 +161,7 @@ const EcosystemDiagram = () => {
           {/* Right Node - Pharmaceutical Companies */}
           <div className="ecosystem-node right-node">
             <div className="node-content">
-              <h4>PHARMACEUTICAL COMPANIES</h4>
+              <h4>Pharma M & A </h4>
               <p>Collaboration</p>
             </div>
           </div>
@@ -169,8 +169,8 @@ const EcosystemDiagram = () => {
           {/* Bottom Node - CRO/BA-BE Centers */}
           <div className="ecosystem-node bottom-node">
             <div className="node-content">
-              <h4>CRO / BA-BE CENTERS</h4>
-              <p>Licensing & Partnerships</p>
+              <h4>Investors</h4>
+              <p>Capitol Advisory </p>
             </div>
           </div>
         </div>

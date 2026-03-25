@@ -54,7 +54,7 @@ function Navbar() {
   ]
   return (
     <header className={`navbar solid`}>
-      <div className="container nav-inner">
+      <div className="global-container nav-inner">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <span className="brand-badge" />
           <span>ENSA Pharma LLP</span>
@@ -108,7 +108,7 @@ function Navbar() {
         </button>
       </div>
       <div className={`mobile-panel ${open ? 'open' : ''}`}>
-        <div className="container mobile-panel-inner">
+        <div className="global-container mobile-panel-inner">
           <NavLink to="/" onClick={handleLinkClick} className="mobile-link">
             Home
           </NavLink>

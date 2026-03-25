@@ -1,5 +1,14 @@
 /* Contact Page Styles - Using Project UI System */
 
+/* Contact-specific Container to avoid conflicts with navigation */
+.contactpage-container {
+  width: 100%;
+  max-width: var(--container-max);
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+  margin: 0 auto;
+}
+
 /* Base Styles */
 .contactpage-page {
   font-family: var(--font-family-primary);
@@ -40,11 +49,13 @@
 }
 
 .contactpage-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  /* font-size: clamp(2rem, 4vw, 3rem); */
   line-height: 1.2;
   color: #1e82c9;
   font-weight: var(--font-weight-bold);
   margin-bottom: 16px;
+  margin-top: 0px;
+  padding-top: 20px;
 }
 
 .contactpage-subtitle {
@@ -381,4 +392,45 @@
   .contactpage-why-item {
     font-size: 13px;
   }
+}
+
+/* Our Philosophy Section */
+.contactpage-philosophy-section {
+  background: var(--color-bg-alt);
+  padding-bottom: 30px;
+  padding-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactpage-philosophy-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  /* max-width: 900px; */
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  padding-bottom: 30px;
+  position: relative;
+  border-left: 4px solid #1e82c9;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.contactpage-philosophy-title {
+  font-size: var(--heading-sub);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.contactpage-philosophy-text {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  margin: 0;
 }

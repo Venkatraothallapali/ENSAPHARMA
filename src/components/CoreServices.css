@@ -1,0 +1,19 @@
+/* Core Services Component - Independent CSS */
+
+.core-services-wrapper {
+  padding: 20px;
+  background-color: var(--color-bg-alt);
+}
+
+.core-services-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.core-services-content {
+  margin-top: var(--spacing-lg);
+}

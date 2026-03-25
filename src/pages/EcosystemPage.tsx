@@ -38,12 +38,14 @@ function EcosystemPage() {
             </p>
           </div>
           
-          <p className="ecosystem-paragraph">
-            ENSA Pharma operates at the intersection of science, commercialization, and investment, 
-            connecting key stakeholders across the pharmaceutical industry to unlock global opportunities. 
-            Our platform creates a unified ecosystem where pharmaceutical innovation can flourish through 
-            strategic partnerships and structured collaborations.
-          </p>
+          <div className="ecosystem-introduction-card">
+            <p className="ecosystem-paragraph">
+              ENSA Pharma operates at the intersection of science, commercialization, and investment, 
+              connecting key stakeholders across the pharmaceutical industry to unlock global opportunities. 
+              Our platform creates a unified ecosystem where pharmaceutical innovation can flourish through 
+              strategic partnerships and structured collaborations.
+            </p>
+          </div>
         </div>
       </Section>
 

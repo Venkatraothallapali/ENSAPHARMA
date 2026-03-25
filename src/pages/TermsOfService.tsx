@@ -2,7 +2,7 @@ function TermsOfService() {
   return (
     <div className="legal-page">
       <div className="legal-header">
-        <div className="container">
+        <div className="global-container">
           <h1>Terms of Service</h1>
           <p className="legal-subtitle">These terms govern your use of ENSA Pharma's pharmaceutical intelligence and transaction advisory services.</p>
           <div className="legal-meta">
@@ -13,7 +13,7 @@ function TermsOfService() {
       </div>
 
       <div className="legal-content">
-        <div className="container">
+        <div className="global-container">
           <div className="legal-toc">
             <h3>Table of Contents</h3>
             <nav className="toc-nav">
@@ -53,28 +53,28 @@ function TermsOfService() {
               <div className="section-content">
                 <p>ENSA Pharma LLP provides specialized pharmaceutical intelligence and transaction advisory services:</p>
                 
-                <div className="services-grid">
-                  <div className="service-card">
+                <div className="legal-services-grid">
+                  <div className="legal-service-card">
                     <h4>API Marketing & Commercialization</h4>
                     <p>Market access strategies and commercial expansion planning.</p>
                   </div>
-                  <div className="service-card">
+                  <div className="legal-service-card">
                     <h4>Licensing Services</h4>
                     <p>In-licensing and out-licensing strategies and portfolio optimization.</p>
                   </div>
-                  <div className="service-card">
+                  <div className="legal-service-card">
                     <h4>M&A Advisory</h4>
                     <p>Target identification, valuation analysis, and transaction structuring.</p>
                   </div>
-                  <div className="service-card">
+                  <div className="legal-service-card">
                     <h4>Laboratory Services</h4>
                     <p>Method validation, stability studies, and BA/BE site representation.</p>
                   </div>
-                  <div className="service-card">
+                  <div className="legal-service-card">
                     <h4>Capital Advisory</h4>
                     <p>Investment readiness assessment and fundraising strategies.</p>
                   </div>
-                  <div className="service-card">
+                  <div className="legal-service-card">
                     <h4>Analytical Services</h4>
                     <p>Testing lab marketing and regulatory compliance support.</p>
                   </div>
@@ -267,7 +267,7 @@ function TermsOfService() {
             <section id="contact" className="legal-section">
               <h2>Contact Information</h2>
               <div className="section-content">
-                <div className="contact-grid">
+                <div className="legal-contact-grid">
                   <div className="contact-item">
                     <h4>Legal Department</h4>
                     <p>For questions about these Terms of Service</p>

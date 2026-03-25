@@ -1,0 +1,30 @@
+/* Services Page Title Component - Independent CSS */
+
+.services-page-title-wrapper {
+  padding: 20px;
+  background-color: var(--color-bg-alt);
+}
+
+.services-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.services-page-subtitle {
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--color-text-dim);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-page-content {
+  margin-top: var(--spacing-lg);
+}

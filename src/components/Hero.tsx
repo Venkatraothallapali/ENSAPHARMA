@@ -10,7 +10,7 @@ type HeroProps = {
   className?: string
 }
 
-function Hero({ title, subtitle, description, supportingStatement, primaryCta, secondaryCta, className }: HeroProps) {
+function Hero({ subtitle, description, supportingStatement, primaryCta, secondaryCta, className }: HeroProps) {
   return (
     <section className={`hero-section ${className ?? ''}`}>
       <div className="hero-background">
@@ -19,11 +19,11 @@ function Hero({ title, subtitle, description, supportingStatement, primaryCta, s
       
       <div className="hero-container">
         <div className="hero-content">
-          <h1>{title}</h1>
           
           {subtitle && (
             <div className="value-proposition-marquee-wrapper">
               <div className="marquee-content">
+                <span className="marquee-text">{subtitle}</span> • 
                 <span className="marquee-text">{subtitle}</span> • 
                 <span className="marquee-text">{subtitle}</span> • 
                 <span className="marquee-text">{subtitle}</span> • 

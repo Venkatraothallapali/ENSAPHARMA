@@ -9,7 +9,7 @@ function Footer() {
   
   return (
     <footer className="footer">
-      <div className="container footer-grid">
+      <div className="global-container footer-grid">
         <div>
           <div className="brand" style={{ marginBottom: 8 }}>
             <span className="brand-badge" />

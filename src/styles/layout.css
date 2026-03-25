@@ -357,7 +357,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 90%);
 }
 
 .hero-container {
@@ -403,10 +403,10 @@
 
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.33%) translateZ(0);
   }
 }
 
@@ -771,14 +771,14 @@
   margin-bottom: 12px;
 }
 
-.card-grid {
+.global-card-grid {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media (max-width: 960px) {
-  .card-grid {
+  .global-card-grid {
     grid-template-columns: 1fr;
   }
 }

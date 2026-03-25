@@ -1,0 +1,16 @@
+/* Industry Sectors Component */
+
+.home-industry-sectors-section-wrapper {
+  padding: 50px 20px;
+  padding-top: 20px;
+  background: var(--color-bg-alt);
+  padding-bottom: 0px;
+}
+
+.home-industry-sectors-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

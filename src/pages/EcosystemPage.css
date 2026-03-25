@@ -126,13 +126,13 @@
 .ecosystem-content-wrapper {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--spacing-section) 0;
+  /* padding: var(--spacing-section) 0; */
 }
 
 /* Section Headers - Project Style */
 .ecosystem-section-header {
   text-align: center;
-  margin-bottom: var(--spacing-section);
+  /* margin-bottom: var(--spacing-section); */
 }
 
 .ecosystem-section-title {
@@ -143,6 +143,7 @@
   color: var(--color-primary);
   text-align: center;
   margin-bottom: var(--spacing-lg);
+  /* padding-top: 5px; */
 }
 
 .ecosystem-section-subtitle {
@@ -153,6 +154,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom:10px;
 }
 
 /* Typography - Project Variables */
@@ -168,11 +170,35 @@
   margin-bottom: 0;
 }
 
+/* Introduction Card */
+.ecosystem-introduction-card {
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--color-surface);
+  box-shadow: 0 4px 12px var(--color-shadow);
+  transition: all var(--transition-base);
+  margin: var(--spacing-md) 0;
+  text-align: center;
+}
+
+.ecosystem-introduction-card .ecosystem-paragraph {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ecosystem-introduction-card:hover {
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transform: translateY(-2px);
+}
+
 /* Cards - Project Design System */
 .ecosystem-card {
   padding: var(--space-8);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
   background: var(--color-surface);
   box-shadow: 0 4px 12px var(--color-shadow);
   transition: all var(--transition-base);
@@ -240,7 +266,7 @@
 /* Grid System - Project Spacing */
 .ecosystem-grid {
   display: grid;
-  gap: var(--spacing-section);
+  gap: 30px;
 }
 
 .ecosystem-grid-2 {
@@ -250,6 +276,12 @@
 /* Section Backgrounds - Project Colors */
 .ecosystem-section-white {
   background: var(--color-bg);
+}
+
+/* Background Variations - More Specific to Avoid Conflicts */
+section.ecosystem-section-alt {
+  background: var(--color-bg-alt) !important;
+  padding-bottom: 0px;
 }
 
 .ecosystem-section-alt {

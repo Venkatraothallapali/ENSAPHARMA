@@ -10,7 +10,7 @@ type SectionProps = {
 function Section({ title, subtitle, accent, className, id, children }: SectionProps) {
   return (
     <section id={id} className={`section ${accent ? 'accent-bg' : ''} ${className ?? ''}`}>
-      <div className="container">
+      <div className="global-container">
         {(title || subtitle) && (
           <div className="section-header">
             {title && <div className="section-title">{title}</div>}
